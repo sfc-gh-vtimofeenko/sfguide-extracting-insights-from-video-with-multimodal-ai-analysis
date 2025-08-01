@@ -136,7 +136,7 @@ SELECT
         {'mode': 'LAYOUT'}
     ):content AS STRING) AS text_content
 FROM DIRECTORY(@videos)
-WHERE relative_path LIKE CONCAT('amicorpus/', $meeting_id, '/slides/%.jpg');
+WHERE relative_path LIKE CONCAT('amicorpus/', $meeting_id, '/slides/', $meeting_part, '.%.jpg');
 
 SELECT * FROM slides_analysis;
 
